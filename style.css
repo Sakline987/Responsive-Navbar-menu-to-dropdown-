@@ -13,34 +13,17 @@
     transform: rotate(360deg);
 }
 
-.navbar {
-    overflow: hidden;
-    background-color: #333;
-    font-family: Arial, Helvetica, sans-serif;
-    transition: top 0.3s ease;
-}
-
-.navbar a {
-    float: left;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
 .navbar .icon {
     display: none;
 }
 
 @media screen and (max-width: 600px) {
 
-    .navbar a:not(:first-child) {
+    .navbar a {
         display: none;
     }
 
     .navbar a.icon {
-        float: right;
         display: block;
     }
 }
@@ -48,12 +31,6 @@
 @media screen and (max-width: 600px) {
     .navbar.responsive {
         position: relative;
-    }
-
-    .navbar.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
     }
 
     .navbar.responsive a {

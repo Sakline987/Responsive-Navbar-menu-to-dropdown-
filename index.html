@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="navbar" id="myNavBar">
+        <a href="#home">Home</a>
+        <a href="#gallary">Gallary</a>
+        <a href="#beforeAfter">Before and After</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contactUs">Contact Us</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars" id="menuIcon"></i> <!-- Initial icon -->
+        </a>
+    </div> <!-- /navbar -->
+
+    <div style="padding-left:16px">
+        <h2>Responsive Topnav Example</h2>
+        <p>Resize the browser window to see how it works.</p>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myNavBar");
+            var menuIcon = document.getElementById("menuIcon");
+            var iconContainer = document.querySelector('.icon');
+
+            // Toggle the navbar between normal and responsive
+            if (x.className === "navbar") {
+                x.className += " responsive";
+                iconContainer.classList.add('open');
+                iconContainer.classList.remove('close');
+                menuIcon.className = "fa fa-times"; // Change to close icon
+            } else {
+                x.className = "navbar";
+                iconContainer.classList.add('close');
+                iconContainer.classList.remove('open');
+                menuIcon.className = "fa fa-bars"; // Change back to hamburger icon
+            }
+        }
+    </script>
+
+</body>
+
+</html>
